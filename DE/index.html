@@ -33,7 +33,7 @@ h2 small{font-weight:400;color:var(--muted);font-size:13.5px;margin-left:4px}
 .sechead .sp{margin-left:auto}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;transition:box-shadow .15s,transform .15s}
 .grid{display:grid;gap:16px}
-.rcards{grid-template-columns:repeat(auto-fill,minmax(360px,1fr))}
+.rcards{grid-template-columns:repeat(auto-fill,minmax(min(480px,100%),1fr))}
 /* картка звіту */
 .rc{display:flex;gap:14px;padding:16px;cursor:pointer}
 .rc:hover{box-shadow:0 8px 26px rgba(20,26,36,.09);transform:translateY(-2px)}
@@ -43,8 +43,10 @@ h2 small{font-weight:400;color:var(--muted);font-size:13.5px;margin-left:4px}
 .rc .nm{color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rc .per{font-size:13px;color:var(--muted)}.rc .per b{color:var(--text);font-weight:700}
 .tags{display:flex;gap:6px;align-items:center}
-.mets{display:grid;grid-template-columns:repeat(3,auto);gap:4px 16px;justify-content:start}
-.mets span{font-size:11.5px;color:var(--muted);display:block;white-space:nowrap}
+.mets{display:grid;grid-template-columns:repeat(3,minmax(0,max-content));gap:4px 16px;justify-content:start;max-width:100%}
+.mets>div{min-width:0}
+.mets span{font-size:11.5px;color:var(--muted);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mets .tt{cursor:help;overflow:visible}.mets .tt .tip{overflow:visible;white-space:normal;color:var(--text);font-size:12px}.mets .tt .tip b{font-size:12.5px;color:var(--text)}
 .mets b{font-size:16px;font-weight:700}
 .shots{display:flex;gap:6px;flex:none}
 .shot{width:58px;height:104px;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#EEF1F5;padding:0;position:relative;transition:border-color .15s,box-shadow .15s}
@@ -143,11 +145,11 @@ footer a{color:var(--accent)}
 <div><h2>Обіцяли → виконали</h2><div class="card box"><ul class="clean"><li>• Net income FY26: обіцяли $4.75–5.00B → $4.86B<span class="d">Q4&#x27;26</span></li><li>• PPA net sales FY26: обіцяли ≈−10% → ≈−9%<span class="d">Q4&#x27;26</span></li><li>• SAT net sales FY26: обіцяли ≈+15% → ≈+15%<span class="d">Q4&#x27;26</span></li><li>• CF net sales FY26: обіцяли ≈+20% → ≈+22%<span class="d">Q4&#x27;26</span></li><li>• FS NI FY26: обіцяли ≈$870M → $885M<span class="d">Q4&#x27;26</span></li></ul></div></div></div>
 <section data-view="cards"><div class="sechead"><h2>Звіти <small>1</small></h2><div class="sp vtog">
 <button data-v="cards">▦ Картки</button><button data-v="list">☰ Список</button></div></div>
-<div class="v-cards"><div class="grid rcards" id="rep-c" data-size="9"><div class="card rc pi" data-href="../DE/2026-11-25_Q4-FY26/"><div class="main">
+<div class="v-cards"><div class="grid rcards" id="rep-c" data-size="8"><div class="card rc pi" data-href="../DE/2026-11-25_Q4-FY26/"><div class="main">
 <div class="h"><img class="logo" src="../DE/logo.png" alt="DE" width="42" height="42" style="border-radius:8px;padding:3px"><div style="min-width:0"><a class="tk" href="../DE/2026-11-25_Q4-FY26/">DE</a><div class="nm">Deere &amp; Company</div></div></div>
 <div class="per"><b>Q4 FY26</b> · 25 лис 2026 · до відкриття</div>
 <div class="tags"><span class="badge neg">MISS</span><span class="tt" tabindex="0"><span class="ver">EXPRESS</span><span class="tip"><b>Експрес-звіт</b>Перша версія — до 48 год після колу — на даних, доступних на той момент: пресреліз, презентація, транскрипт (якщо вже вийшов), реакція пре- та постмаркету. Ціни, рейтинги й цільові ціни аналітиків ще не усталилися.</span></span></div>
-<div class="mets"><div><span>Revenue vs конс.</span><b class="pos">+1.7%</b></div><div><span>EPS vs конс.</span><b class="neg">−4.2%</b></div><div><span>Реакція від close перед звітом · сесія</span><b class="pos">+4.4%</b></div></div>
+<div class="mets"><div><span>Revenue vs конс.</span><b class="pos">+1.7%</b></div><div><span>EPS vs конс.</span><b class="neg">−4.2%</b></div><div><span class="tt" tabindex="0" style="display:block"><span>Реакція · сесія</span><span class="tip"><b>Реакція · сесія</b>Реакція від close перед звітом · сесія</span></span><b class="pos">+4.4%</b></div></div>
 </div><div class="shots" data-srcs="../DE/2026-11-25_Q4-FY26/express/compact_p1.png|../DE/2026-11-25_Q4-FY26/express/compact_p2.png" data-title="DE · Q4 FY26" data-name="DE_Q4-FY26_express"><button class="shot" data-i="0" title="Скріншот звіту 1"><img src="../DE/2026-11-25_Q4-FY26/express/compact_p1.png" alt="" loading="lazy"><i>1</i></button><button class="shot" data-i="1" title="Скріншот звіту 2"><img src="../DE/2026-11-25_Q4-FY26/express/compact_p2.png" alt="" loading="lazy"><i>2</i></button></div></div></div><div class="pager" id="rep-c-nav"></div></div>
 <div class="v-list"><div class="card tcard"><table class="cmp"><thead><tr><th>Квартал</th><th>Вердикт</th><th>Тип</th><th class="num">Revenue vs конс.</th><th class="num">EPS vs конс.</th>
 <th class="num">Реакція</th><th>Скріншоти</th></tr></thead><tbody id="rep-l" data-size="15"><tr class="pi" data-href="../DE/2026-11-25_Q4-FY26/"><td class="nw"><b>Q4 FY26</b><span class="sub">25 лис 2026 · до відкриття</span></td>
@@ -156,7 +158,7 @@ footer a{color:var(--accent)}
 <td class="num pos" title="Реакція від close перед звітом · сесія">+4.4%</td><td><div class="shots sm" data-srcs="../DE/2026-11-25_Q4-FY26/express/compact_p1.png|../DE/2026-11-25_Q4-FY26/express/compact_p2.png" data-title="DE · Q4 FY26" data-name="DE_Q4-FY26_express"><button class="shot" data-i="0" title="Скріншот звіту 1"><img src="../DE/2026-11-25_Q4-FY26/express/compact_p1.png" alt="" loading="lazy"><i>1</i></button><button class="shot" data-i="1" title="Скріншот звіту 2"><img src="../DE/2026-11-25_Q4-FY26/express/compact_p2.png" alt="" loading="lazy"><i>2</i></button></div></td></tr></tbody></table></div>
 <div class="pager" id="rep-l-nav"></div></div></section></main>
 <footer><div class="wrap"><span>Дані: пресрелізи й звітність компаній (SEC), транскрипти колів, IBKR. Не є інвестиційною рекомендацією.</span>
-<span>Оновлено 26 лис 2026, 00:24 · <a href="../rss/">Підписка (RSS)</a> · <a href="https://yuinvest.io/" target="_blank" rel="noopener">yuinvest.io</a></span></div></footer>
+<span>Оновлено 26 лис 2026, 01:20 · <a href="../rss/">Підписка (RSS)</a> · <a href="https://yuinvest.io/" target="_blank" rel="noopener">yuinvest.io</a></span></div></footer>
 <div class="lb" id="lb" hidden><div class="lb-in"><div class="lb-top"><b class="ttl"></b><span class="tabs"><button>Скріншот 1</button><button>Скріншот 2</button></span>
 <a class="dl" href="#">Завантажити PNG</a><button class="x" aria-label="Закрити">✕</button></div><div class="lb-img"><img alt="Скріншот звіту"></div></div></div><script>
 (function(){

@@ -33,7 +33,7 @@ h2 small{font-weight:400;color:var(--muted);font-size:13.5px;margin-left:4px}
 .sechead .sp{margin-left:auto}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;transition:box-shadow .15s,transform .15s}
 .grid{display:grid;gap:16px}
-.rcards{grid-template-columns:repeat(auto-fill,minmax(360px,1fr))}
+.rcards{grid-template-columns:repeat(auto-fill,minmax(min(480px,100%),1fr))}
 /* картка звіту */
 .rc{display:flex;gap:14px;padding:16px;cursor:pointer}
 .rc:hover{box-shadow:0 8px 26px rgba(20,26,36,.09);transform:translateY(-2px)}
@@ -43,8 +43,10 @@ h2 small{font-weight:400;color:var(--muted);font-size:13.5px;margin-left:4px}
 .rc .nm{color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rc .per{font-size:13px;color:var(--muted)}.rc .per b{color:var(--text);font-weight:700}
 .tags{display:flex;gap:6px;align-items:center}
-.mets{display:grid;grid-template-columns:repeat(3,auto);gap:4px 16px;justify-content:start}
-.mets span{font-size:11.5px;color:var(--muted);display:block;white-space:nowrap}
+.mets{display:grid;grid-template-columns:repeat(3,minmax(0,max-content));gap:4px 16px;justify-content:start;max-width:100%}
+.mets>div{min-width:0}
+.mets span{font-size:11.5px;color:var(--muted);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mets .tt{cursor:help;overflow:visible}.mets .tt .tip{overflow:visible;white-space:normal;color:var(--text);font-size:12px}.mets .tt .tip b{font-size:12.5px;color:var(--text)}
 .mets b{font-size:16px;font-weight:700}
 .shots{display:flex;gap:6px;flex:none}
 .shot{width:58px;height:104px;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#EEF1F5;padding:0;position:relative;transition:border-color .15s,box-shadow .15s}
@@ -130,7 +132,7 @@ footer a{color:var(--accent)}
 <main class="wrap"><section class="hero"><h1>Сторінку не знайдено</h1><p>Можливо, адреса змінилась або звіт ще не опубліковано.</p>
 <div class="stats"><a class="stat" href="https://makc911.github.io/earnings-reports/">← На головну</a><a class="stat" href="https://makc911.github.io/earnings-reports/watchlist/">Вочлист</a><a class="stat" href="https://makc911.github.io/earnings-reports/calendar/">Календар</a></div></section></main>
 <footer><div class="wrap"><span>Дані: пресрелізи й звітність компаній (SEC), транскрипти колів, IBKR. Не є інвестиційною рекомендацією.</span>
-<span>Оновлено 26 лис 2026, 00:24 · <a href="https://makc911.github.io/earnings-reports/rss/">Підписка (RSS)</a> · <a href="https://yuinvest.io/" target="_blank" rel="noopener">yuinvest.io</a></span></div></footer>
+<span>Оновлено 26 лис 2026, 01:20 · <a href="https://makc911.github.io/earnings-reports/rss/">Підписка (RSS)</a> · <a href="https://yuinvest.io/" target="_blank" rel="noopener">yuinvest.io</a></span></div></footer>
 <div class="lb" id="lb" hidden><div class="lb-in"><div class="lb-top"><b class="ttl"></b><span class="tabs"><button>Скріншот 1</button><button>Скріншот 2</button></span>
 <a class="dl" href="#">Завантажити PNG</a><button class="x" aria-label="Закрити">✕</button></div><div class="lb-img"><img alt="Скріншот звіту"></div></div></div><script>
 (function(){
